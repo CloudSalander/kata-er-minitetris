@@ -2,6 +2,7 @@
 
 Disetena kata per l'especialitat fullstackPHP 14-9-23.
 
+
 Este ejercicio forma parte de los [retos semanales de programación de Mouredev](https://retosdeprogramacion.com/semanales2023) en concreto el #33 de 2023.
 
 
