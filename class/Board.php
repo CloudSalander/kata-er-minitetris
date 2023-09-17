@@ -1,6 +1,8 @@
 <?php
 class Board {
 	
+	private const SQUARE = 0x2B1c; 
+	
 	private int $rows;
 	private int $columns;
 
@@ -18,7 +20,7 @@ class Board {
 	}
 	private function drawDashesLine(): void {
 		for($i = 0; $i < $this->columns; ++$i) {
-			echo "_|";
+			echo mb_chr(Board::SQUARE);
 		}
 		echo PHP_EOL;
 	}
