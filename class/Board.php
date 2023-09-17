@@ -16,10 +16,13 @@ class Board {
 		$this->piece = new Piece();
 	}
 
-	public function draw(?Move $move = null):void  {
+	public function play(?Move $move = null):void {
 		
-		if(!is_null($move)) var_dump($move);
+		if(!is_null($move)) $this->movePiece($move);
+		$this->draw();
+	}
 
+	private function draw() {
 		$rows_count = 0;
 		while($rows_count < $this->rows) {
 			$this->drawRow($rows_count);
@@ -34,6 +37,25 @@ class Board {
 			echo mb_chr($char_to_print);
 		}
 		echo PHP_EOL;
+	}
+
+	private function movePiece(Move $move): void {
+		if(!$this->piece->isLastRow($this->rows)) {
+			switch($move) {
+				case MOVE::DOWN:
+					$this->piece->moveDown();
+					break;
+				case MOVE::LEFT:
+					echo 'left';
+					break;
+				case MOVE::RIGHT:
+					echo 'riight';
+					break;
+				case MOVE::ROTATE:
+					echo 'giiira';
+					break;
+			}
+		}
 	}
 }
 ?>

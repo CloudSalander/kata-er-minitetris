@@ -21,6 +21,19 @@ class Piece {
         }
         return false;
 	}
+
+    public function isLastRow(int $max_row): bool {
+        foreach($this->positions as $position) {
+            if($position->y >= $max_row-1) return true;
+        }
+        return false;
+    }
+
+    public function moveDown(): void {
+        foreach($this->positions as $position) {
+            ++$position->y;
+        }   
+    }
 }
 
 ?>

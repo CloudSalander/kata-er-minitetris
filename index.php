@@ -8,7 +8,7 @@ define("MOVE_MSG","Next move!");
 define("AVAILABLE_MOVES", ['1-DOWN','2-LEFT','3-RIGHT','4-ROTATE']);
 
 $board = new Board(BOARD_ROWS, BOARD_COLUMNS);
-$board->draw();
+$board->play();
 $move = -1;
 
 while($move != 0) {
@@ -16,7 +16,7 @@ while($move != 0) {
 	$move = readline(MOVE_MSG);
 	if(isRightMove($move)) {
 		$move = generateMove(intval($move));
-		$board->draw($move);
+		$board->play($move);
 	}
 }
 
