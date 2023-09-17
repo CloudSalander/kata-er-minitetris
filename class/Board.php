@@ -16,7 +16,10 @@ class Board {
 		$this->piece = new Piece();
 	}
 
-	public function draw():void  {
+	public function draw(?Move $move = null):void  {
+		
+		if(!is_null($move)) var_dump($move);
+
 		$rows_count = 0;
 		while($rows_count < $this->rows) {
 			$this->drawRow($rows_count);
