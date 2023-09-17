@@ -29,10 +29,23 @@ class Piece {
         return false;
     }
 
+    public function canMoveLeft() : bool {
+        foreach($this->positions as $position) {
+            if($position->x <= 0) return false;
+        }
+        return true;      
+    }
+
     public function moveDown(): void {
         foreach($this->positions as $position) {
             ++$position->y;
         }   
+    }
+
+    public function moveLeft(): void {
+        foreach($this->positions as $position) {
+            --$position->x;
+        } 
     }
 }
 

@@ -40,13 +40,14 @@ class Board {
 	}
 
 	private function movePiece(Move $move): void {
+		//Info: Decided that, if we arrive to the last row, can't move more
 		if(!$this->piece->isLastRow($this->rows)) {
 			switch($move) {
 				case MOVE::DOWN:
 					$this->piece->moveDown();
 					break;
 				case MOVE::LEFT:
-					echo 'left';
+					if($this->piece->canMoveLeft()) $this->piece->moveLeft();
 					break;
 				case MOVE::RIGHT:
 					echo 'riight';
