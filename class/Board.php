@@ -50,7 +50,7 @@ class Board {
 					if($this->piece->canMoveLeft()) $this->piece->moveLeft();
 					break;
 				case MOVE::RIGHT:
-					echo 'riight';
+					if($this->piece->canMoveRight($this->columns)) $this->piece->moveRight();
 					break;
 				case MOVE::ROTATE:
 					echo 'giiira';

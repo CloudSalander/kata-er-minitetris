@@ -36,6 +36,13 @@ class Piece {
         return true;      
     }
 
+    public function canMoveRight(int $max_column) : bool {
+        foreach($this->positions as $position) {
+            if($position->x >= $max_column-1) return false;
+        }
+        return true;      
+    }
+
     public function moveDown(): void {
         foreach($this->positions as $position) {
             ++$position->y;
@@ -45,6 +52,12 @@ class Piece {
     public function moveLeft(): void {
         foreach($this->positions as $position) {
             --$position->x;
+        } 
+    }
+
+    public function moveRight(): void {
+        foreach($this->positions as $position) {
+            ++$position->x;
         } 
     }
 }
