@@ -15,6 +15,7 @@ while($move != 0) {
 	echo '4-ROTATE'.PHP_EOL;
 	echo '0-END OF GAME'.PHP_EOL;
 	$move = readline("Next move!");
+	$board->draw();
 }
 
 
