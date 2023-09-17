@@ -47,10 +47,10 @@ class Board {
 					$this->piece->moveDown();
 					break;
 				case MOVE::LEFT:
-					if($this->piece->canMoveLeft()) $this->piece->moveLeft();
+					$this->piece->moveLeft();
 					break;
 				case MOVE::RIGHT:
-					if($this->piece->canMoveRight($this->columns)) $this->piece->moveRight();
+					$this->piece->moveRight($this->columns);
 					break;
 				case MOVE::ROTATE:
 					echo 'giiira';
