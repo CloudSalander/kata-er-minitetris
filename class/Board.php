@@ -53,7 +53,7 @@ class Board {
 					$this->piece->moveRight($this->columns);
 					break;
 				case MOVE::ROTATE:
-					echo 'giiira';
+					$this->piece->rotate($this->rows,$this->columns);
 					break;
 			}
 		}
